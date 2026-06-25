@@ -49,7 +49,7 @@ body {
   display: flex;
   min-width: 0;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
 .app-logo {
@@ -65,7 +65,7 @@ body {
 }
 
 .titlebar-breadcrumb {
-  min-width: 220px;
+  min-width: 120px;
   max-width: 360px;
   white-space: nowrap;
 }
@@ -76,10 +76,29 @@ body {
   font-size: 13px;
 }
 
+.titlebar-system-name {
+  color: #1f2328;
+  font-weight: 600;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.titlebar-divider {
+  flex: 0 0 auto;
+  width: 1px;
+  height: 18px;
+  margin: 0 4px;
+  background: #cfd6e2;
+}
+
+.titlebar-breadcrumb .ant-breadcrumb-separator {
+  display: inline-flex;
+  align-items: center;
+  margin-inline: 10px;
+}
+
 .device-area {
   height: 28px;
-  padding-left: 14px;
-  border-left: 1px solid #d8dee8;
 }
 
 .device-status {
@@ -115,12 +134,12 @@ body {
   display: flex;
   flex: 0 0 auto;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 
 .title-button {
   display: inline-flex;
-  width: 34px;
+  width: 30px;
   height: 30px;
   align-items: center;
   justify-content: center;
@@ -245,7 +264,7 @@ body {
 
 @media (max-width: 1180px) {
   .titlebar-breadcrumb {
-    min-width: 180px;
+    min-width: 100px;
     max-width: 260px;
   }
 
