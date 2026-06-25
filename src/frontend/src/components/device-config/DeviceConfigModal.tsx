@@ -26,7 +26,7 @@ function DeviceConfigModal({
       onOk={onClose}
       onCancel={onClose}
     >
-      <Form layout="vertical" className="device-config-form">
+      <Form layout="vertical" className="pt-2.5">
         <Form.Item label="连接方式">
           <Radio.Group
             value={deviceMode}
@@ -38,7 +38,7 @@ function DeviceConfigModal({
         </Form.Item>
 
         {deviceMode === "CAN" ? (
-          <div className="form-row">
+          <div className="grid grid-cols-2 gap-3">
             <Form.Item label="CAN 通道">
               <Select
                 defaultValue="can0"
@@ -61,7 +61,7 @@ function DeviceConfigModal({
             </Form.Item>
           </div>
         ) : (
-          <div className="form-row">
+          <div className="grid grid-cols-2 gap-3">
             <Form.Item label="网口地址">
               <Input defaultValue="192.168.0.10" />
             </Form.Item>

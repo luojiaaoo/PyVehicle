@@ -23,7 +23,9 @@ function App() {
   };
 
   const popupRender: MenuProps["popupRender"] = (originNode) => (
-    <div className="app-menu-popup">{originNode}</div>
+    <div className="app-menu-popup min-w-[220px] rounded-md border border-[#d8dee8] bg-white p-1.5 shadow-[0_8px_24px_rgb(31_35_40_/_12%)]">
+      {originNode}
+    </div>
   );
 
   return (
@@ -51,7 +53,7 @@ function App() {
         },
       }}
     >
-      <Layout className="app-shell">
+      <Layout className="h-screen min-w-[1040px] bg-[#e9edf3]">
         <AppTitleBar
           activeRoute={activeRoute}
           deviceMode={deviceMode}
@@ -61,7 +63,7 @@ function App() {
           onMaximizedChange={setIsMaximized}
         />
 
-        <Header className="app-menubar">
+        <Header className="h-[42px] border-b border-[#d8dee8] bg-white px-4 leading-[42px]">
           <Menu
             mode="horizontal"
             items={menuItems}
@@ -71,7 +73,7 @@ function App() {
           />
         </Header>
 
-        <Content className="app-content">
+        <Content className="h-[calc(100vh-84px)] overflow-auto bg-[#e9edf3] px-3 pb-3 pt-2.5">
           {activeKey === "flashing" && <FlashingPage />}
         </Content>
       </Layout>

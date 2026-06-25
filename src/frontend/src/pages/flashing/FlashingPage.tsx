@@ -7,7 +7,7 @@ const iconSize = 16;
 
 function FlashingPage() {
   return (
-    <div className="page-grid page-grid-wide">
+    <div className="grid grid-cols-[minmax(440px,1fr)_minmax(420px,1fr)] items-start gap-2.5 max-[1180px]:grid-cols-1">
       <Card title="刷写准备" extra={<Tag color="default">待连接</Tag>}>
         <Form layout="vertical">
           <Form.Item label="烧录文件">
@@ -17,7 +17,7 @@ function FlashingPage() {
               suffix={<FileInput size={iconSize} />}
             />
           </Form.Item>
-          <div className="form-row">
+          <div className="grid grid-cols-2 gap-3">
             <Form.Item label="目标 ECU">
               <Select
                 placeholder="选择目标"
