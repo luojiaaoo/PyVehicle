@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Badge, Breadcrumb, Button, Layout, Space, Tag } from "antd";
 import {
   Cable,
-  CarFront,
   Copy,
   Info,
   Minus,
@@ -11,6 +10,7 @@ import {
   X,
 } from "lucide-react";
 
+import appIconUrl from "../../assets/favicon.ico";
 import type { PageRoute } from "../../routes/menu";
 import type { ConnectionStatus, DeviceMode } from "../../types/device";
 import DeviceConfigModal from "../device-config/DeviceConfigModal";
@@ -44,10 +44,10 @@ function AppTitleBar({
       <Header className="flex h-[42px] items-center justify-between border-b border-[#d8dee8] bg-[#f8fafc] py-0 pl-3.5 pr-2 leading-none select-none">
         <div className="flex min-w-0 items-center gap-2.5">
           <div
-            className="grid h-7 w-7 flex-none place-items-center rounded-md bg-[#1f6feb] text-white shadow-[inset_0_-1px_0_rgb(0_0_0_/_18%)]"
+            className="grid h-7 w-7 flex-none place-items-center"
             aria-label="PyVehicle"
           >
-            <CarFront size={18} strokeWidth={2.4} />
+            <img src={appIconUrl} alt="" className="h-6 w-6" />
           </div>
           <span className="whitespace-nowrap text-[13px] font-semibold text-[#1f2328]">
             PyVehicle
